@@ -17,6 +17,7 @@ import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 const FormComponent = ({ info, setInfo }) => {
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setInfo({ ...info, [name]: value })
   }
   return (
     <Grid
@@ -61,7 +62,7 @@ const FormComponent = ({ info, setInfo }) => {
               variant="outlined"
               name="phoneNumber"
               value={null}
-              onChange={null}
+              onChange={handleChange}
               placeholder="Phone Number"
               InputProps={{
                 startAdornment: (
@@ -78,7 +79,7 @@ const FormComponent = ({ info, setInfo }) => {
                 name="gender"
                 variant="outlined"
                 value={null}
-                onChange={null}
+                onChange={handleChange}
               >
                 <MenuItem value="Female">Female</MenuItem>
                 <MenuItem value="Male">Male</MenuItem>
