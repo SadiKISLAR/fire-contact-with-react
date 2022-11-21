@@ -1,8 +1,9 @@
 import { getDatabase, ref, set, push } from "firebase/database";
+import firebase from "./firebase"
 
 
 export const AddUser = (info) => {
-    const db = getDatabase();
+    const db = getDatabase(firebase);
     const userRef = ref(db, "user/");
     const newUserRef = push(userRef);
 
