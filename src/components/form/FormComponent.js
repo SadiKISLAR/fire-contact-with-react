@@ -14,7 +14,7 @@ import {
 import { AccountCircle } from "@mui/icons-material";
 import PhoneEnabledIcon from "@mui/icons-material/PhoneEnabled";
 
-const FormComponent = ({ info, setInfo }) => {
+const FormComponent = ({ info, setInfo, handleSubmit }) => {
   const handleChange = (e) => {
     e.preventDefault();
     const { name, value } = e.target;

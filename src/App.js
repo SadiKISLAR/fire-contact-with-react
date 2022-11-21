@@ -12,6 +12,7 @@ const initialValues = {
 function App() {
   const [info, setInfo] = useState(initialValues)
   const handleSubmit = (e) => {
+    e.preventDefault();
 
   }
 
