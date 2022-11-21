@@ -15,7 +15,7 @@ export const AddUser = (info) => {
         gender: info.gender
     })
 }
-export default useEffect = () => {
+export const useFetch = () => {
 
     const [isLoading, setIsLoading] = useState()
     const [contactList, setContactList] = useState()
@@ -32,7 +32,9 @@ export default useEffect = () => {
                 userArray.push({ id, ...data[id] })
             }
             setContactList(userArray)
+            setIsLoading(false)
         })
+        return { isLoading, contactList }
     }, [])
 
 
