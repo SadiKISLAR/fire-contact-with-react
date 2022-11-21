@@ -36,10 +36,10 @@ const FormComponent = ({ info, setInfo, handleSubmit }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <code>{"<Clarusway/> "}</code>
+            <code>Sh@dy's</code>
           </a>
         </div>
-        <span className="design header">design</span>
+        <span className="design header">--/design/--</span>
       </p>
       <h2 className="contact-header">Add Contact</h2>
 
