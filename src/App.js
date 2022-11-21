@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { ToastContainer } from "react-toastify";
 import "./App.css";
 import Contacts from "./components/contacts/Contacts";
 import FormComponent from "./components/form/FormComponent";
-import { AddUser } from "./utils/functions";
+import { AddUser, UpdateUser } from "./utils/functions";
 
 const initialValues = {
   userName: "",
@@ -15,13 +16,23 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    AddUser(info)
+    if (info.id) {
+      UpdateUser(info)
+    }
+    else {
+      AddUser(info)
+    }
+  }
+
+  const editUser = (id, userName, phoneNumber, gender) => {
+    setInfo({ id, userName, phoneNumber, gender })
   }
 
   return (
     <div className="App">
       <FormComponent info={info} setInfo={setInfo} handleSubmit={handleSubmit} />
-      <Contacts />
+      <Contacts editUser={editUser} />
+      <ToastContainer />
     </div>
   );
 }
