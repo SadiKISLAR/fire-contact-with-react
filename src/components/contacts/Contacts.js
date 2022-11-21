@@ -40,7 +40,7 @@ const Contacts = ({ editUser }) => {
                   </TableCell>
                 </TableRow>
               ) : contactList?.lenght === 0 ? (
-                // Bilgiler olmadığı,boş olduğu  durumda veri bulunamadı mesajı
+
                 <TableRow
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
@@ -49,7 +49,7 @@ const Contacts = ({ editUser }) => {
                   </TableCell>
                 </TableRow>
               ) : (
-                // Bilgiler geldiği zaman aşağıya yazılacak kodlar çalışsın
+
                 contactList?.map((item, index) => (
                   <TableRow>
                     <TableCell align="center">{item.username} </TableCell>

@@ -22,10 +22,11 @@ function App() {
     else {
       AddUser(info)
     }
+    setInfo(initialValues)
   }
 
-  const editUser = (id, userName, phoneNumber, gender) => {
-    setInfo({ id, userName, phoneNumber, gender })
+  const editUser = (id, username, phoneNumber, gender) => {
+    setInfo({ id, username, phoneNumber, gender })
   }
 
   return (
